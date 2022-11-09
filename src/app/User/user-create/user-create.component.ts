@@ -23,7 +23,7 @@ export class UserCreateComponent implements OnInit {
     this.usesvc.create(this.use).subscribe({
       next: (res) =>{
         console.debug("User ceated");
-        this.router.navigateByUrl("/use/list");
+        this.router.navigateByUrl("/user/list");
 
       },
       error: (err) => {

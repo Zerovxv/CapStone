@@ -23,7 +23,7 @@ export class UserEditComponent implements OnInit {
       this.usesvc.edit(this.use).subscribe({
         next: (res) =>{
           console.debug("User Changed");
-          this.router.navigateByUrl("/use/list");
+          this.router.navigateByUrl("/user/list");
         },
         error: (err) =>{
           console.error(err);

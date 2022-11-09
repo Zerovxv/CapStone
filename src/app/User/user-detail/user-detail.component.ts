@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { User } from '../User.class';
 import { UserService } from '../user.service';
 
@@ -15,8 +15,28 @@ export class UserDetailComponent implements OnInit {
   use!: User;
   constructor(
     private usesvc: UserService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
+
+  showVerifyButton: boolean = false;
+
+
+  remove(): void{
+    this.showVerifyButton = !this.showVerifyButton;
+  }
+
+  verifyDelete(): void{
+    this.usesvc.remove(this.use.id).subscribe({
+      next: (res) => {
+        console.debug("User deleted");
+        this.router.navigateByUrl("/user/list");
+      },
+      error: (err) => {
+        console.error(err);
+      }
+    })
+  }
 
   ngOnInit(): void {
     let id = +this.route.snapshot.params["id"];

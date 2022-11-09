@@ -1,7 +1,7 @@
 <div id="component">
 <app-head [pageTitle]="pageTitle"></app-head>
 <main id="main">
-  <a routerLink="/use/create">Create New</a>
+  <a routerLink="/user/create">Create New</a>
 
     <table class="table table-sm">
       <thead>
@@ -29,8 +29,8 @@
           <td>{{u.isReviewer}}</td>
           <td>{{u.isAdmin}}</td>
           <td>
-            <a routerLink="/use/detail//{{u.id}}">Detail</a> |
-            <a routerLink="/use/edit//{{u.id}}">Edit</a>
+            <a routerLink="/user/detail//{{u.id}}">Detail</a> |
+            <a routerLink="/user/edit//{{u.id}}">Edit</a>
           </td>
 
         </tr>
