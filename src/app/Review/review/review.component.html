@@ -8,7 +8,7 @@
             <th>Description</th>
             <th>Status</th>
             <th>Total</th>
-            <th>Employee</th>
+
             <th>Actions</th>
         </tr>
     </thead>
@@ -18,7 +18,7 @@
             <td>{{ req.desc }}</td>
             <td>{{ req.status }}</td>
             <td>{{ req.total | currency }}</td>
-            <td>{{ exp.employee.name }}</td>
+
             <td>
                 <button (click)="approve(req.id, req)" class="btn btn-link">Approve</button>
                 <button (click)="reject(req.id, req)" class="btn btn-link">Reject</button>
