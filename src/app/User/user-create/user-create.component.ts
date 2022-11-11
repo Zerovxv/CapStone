@@ -20,6 +20,7 @@ export class UserCreateComponent implements OnInit {
   ) { }
 
   save(): void{
+    console.log(this.use)
     this.usesvc.create(this.use).subscribe({
       next: (res) =>{
         console.debug("User ceated");

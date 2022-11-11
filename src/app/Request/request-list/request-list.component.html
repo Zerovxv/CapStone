@@ -2,7 +2,7 @@
     <app-head [pageTitle]="pageTitle"></app-head>
     <main id="main">
       <a routerLink="/request/create">Create New</a>
-    
+
         <table class="table table-sm">
           <thead>
             <tr>
@@ -12,9 +12,10 @@
               <th>RejectionReason</th>
               <th>DeliveryMode</th>
               <th>Status</th>
+              <th>Total</th>
               <th>UserId</th>
-             
-    
+
+
             </tr>
           </thead>
           <tbody>
@@ -25,19 +26,21 @@
               <td>{{r.rejectionReason}}</td>
               <td>{{r.deliveryMode}}</td>
               <td>{{r.status}}</td>
+              <td>{{r.total}}</td>
               <td>{{r.userId}}</td>
-       
+
               <td>
-                <a routerLink="/request/detail//{{r.id}}">Detail</a> |
-                <a routerLink="/request/edit//{{r.id}}">Edit</a>
+                <a routerLink="/request/detail/{{r.id}}">Detail</a> |
+                <a routerLink="/request/edit/{{r.id}}">Edit</a> |
+                <a routerLink="/request/lines/{{r.id}}"> Lines</a>
               </td>
-    
+
             </tr>
-    
-    
+
+
           </tbody>
-    
+
         </table>
     </main>
-    
-      <div>
+
+  </div>

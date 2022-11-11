@@ -6,41 +6,47 @@
             <tr>
               <th>Id</th>
                 <td><input [(ngModel)]="prod.id" type="number" disabled></td>
-             <tr>
+            </tr>
              <tr>
               <th>PartNbr</th>
                 <td><input [(ngModel)]="prod.partNbr" type="text" ></td>
+             </tr>
             <tr>
-            </tr>
               <th>Name</th>
                 <td><input [(ngModel)]="prod.name" type="text" ></td>
-            <tr>
+            </tr>
               <tr>
                 <th>Price</th>
                 <td><input [(ngModel)]="prod.price" type="text" ></td>
-                <tr>
+              </tr>
                 <tr>
                   <th>Unit</th>
                   <td><input [(ngModel)]="prod.unit" type="text" ></td>
-                  <tr>
+                </tr>
                     <tr>
                     <th>PhotoPath</th>
-                    <td><input [(ngModel)]="prod.photoPath" type="text" ></td>
-                    <tr>
+                    <td><input [(ngModel)]="prod.photopath" type="text" ></td>
+                    </tr>
                       <tr>
-                      <th>VendorId</th>
-                      <td><input [(ngModel)]="prod.vendorId" type="number" ></td>
-                      <tr>
-                       
-  
+                      <th>VendorName</th>
+                      <td>
+                        <select [(ngModel)]="prod.vendorId" >
+                          <option *ngFor=" let v of vens" value = "{{v.id}}">
+                              {{v.name}}
+                          </option>
+                        </select>
+                      </td>
+                      </tr>
+
+
           </tbody>
-  
+
         </table>
         <div>
           <button (click)="save()" class="btn btn-primary">Save</button>
         </div>
     </main>
-  
-      <div>
-  
+
+  </div>
+
 

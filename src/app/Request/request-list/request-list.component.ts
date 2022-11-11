@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Request } from '../Request.class';
+import { Request } from '../request.class';
 import { RequestService } from '../request.service';
 
 @Component({

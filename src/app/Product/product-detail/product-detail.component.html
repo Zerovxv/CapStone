@@ -1,44 +1,44 @@
 <div id="component">
     <app-head [pageTitle]="pageTitle"></app-head>
     <main id="main">
-        <table class="table table-sm" *ngif="use">
+        <table class="table table-sm" *ngIf="prod">
           <tbody>
             <tr>
               <th>Id</th>
-                <td><input [(ngModel)]="pro.id" type="number" disabled></td>
-             <tr>
+                <td><input [(ngModel)]="prod.id" type="number" disabled></td>
+            </tr>
              <tr>
               <th>PartNbr</th>
                 <td><input [(ngModel)]="prod.partNbr" type="text" [disabled]="IsDetailPage"></td>
+             </tr>
             <tr>
-            </tr>
               <th>Name</th>
                 <td><input [(ngModel)]="prod.name" type="text" [disabled]="IsDetailPage"></td>
-            <tr>
+            </tr>
               <tr>
                 <th>Price</th>
                 <td><input [(ngModel)]="prod.price" type="currency" [disabled]="IsDetailPage"></td>
-                <tr>
+              </tr>
                 <tr>
                   <th>Unit</th>
                   <td><input [(ngModel)]="prod.unit" type="text" [disabled]="IsDetailPage"></td>
-                  <tr>
+                </tr>
                     <tr>
                     <th>PhotPath</th>
-                    <td><input [(ngModel)]="prod.phtoPath" type="text" [disabled]="IsDetailPage"></td>
-                    <tr>
+                    <td><input [(ngModel)]="prod.photopath" type="text" [disabled]="IsDetailPage"></td>
+                    </tr>
                       <tr>
                       <th>VendorId</th>
                       <td><input [(ngModel)]="prod.vendorId" type="number" [disabled]="IsDetailPage"></td>
-                      <tr>
-                       
+                      </tr>
+
           </tbody>
-  
+
         </table>
         <div>
-          <button (click)="remove()" class="btn btn-danger">Delete</button>'
+          <button (click)="verifyDelete()" class="btn btn-danger">Delete</button>'
         </div>
     </main>
-  
-      <div>
-  
+
+  </div>
+

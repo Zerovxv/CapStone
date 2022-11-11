@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Vendor } from '../Vendor.class';
-import { VendorService } from '../vendor.service';
+import { VendorService } from '../vendorsvc.service';
 
 @Component({
   selector: 'app-vendor-detail',

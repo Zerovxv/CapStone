@@ -1,7 +1,7 @@
 <div id="component">
   <app-head>[pageTitle]="User Create"</app-head>
   <main id="main">
-      <table class="table table-striped table-sm">
+      <table class="table table-striped table-sm" *ngIf="use">
         <tbody>
           <tr>
             <th>Id</th>
@@ -30,7 +30,7 @@
                     <tr>
                     <th>IsAdmin</th>
                     <td><input [(ngModel)]="use.isAdmin" type="checkbox" ></td>
-                    <tr>
+                    </tr>
 
 
         </tbody>
@@ -41,4 +41,4 @@
       </div>
   </main>
 
-    <div>
+</div>

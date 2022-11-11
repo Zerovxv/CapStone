@@ -1,7 +1,7 @@
 <div id="component">
   <app-head [pageTitle]="pageTitle"></app-head>
   <main id="main">
-      <table class="table table-sm" *ngif="use">
+      <table class="table table-sm" *ngIf="use">
         <tbody>
           <tr>
             <th>Id</th>
@@ -30,15 +30,15 @@
                     <tr>
                     <th>IsAdmin</th>
                     <td><input [(ngModel)]="use.isAdmin" type="checkbox" [disabled]="IsDetailPage"></td>
-                    <tr>
+                    </tr>
 
 
         </tbody>
 
       </table>
       <div>
-        <button (click)="remove()" class="btn btn-danger">Delete</button>'
+        <button (click)="verifyDelete()" class="btn btn-danger">Delete</button>'
       </div>
   </main>
 
-    <div>
+</div>

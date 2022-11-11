@@ -2,7 +2,7 @@
     <app-head [pageTitle]="pageTitle"></app-head>
     <main id="main">
       <a routerLink="/product/create">Create New</a>
-    
+
         <table class="table table-sm">
           <thead>
             <tr>
@@ -12,9 +12,9 @@
               <th>Price</th>
               <th>Unit</th>
               <th>PhotoPath</th>
-              <th>VendorId</th>
-             
-    
+              <th>Vendor</th>
+
+
             </tr>
           </thead>
           <tbody>
@@ -22,22 +22,22 @@
               <td>{{p.id}}</td>
               <td>{{p.partNbr}}</td>
               <td>{{p.name}}</td>
-              <td>{{p.price}}</td>
+              <td>{{p.price | currency}}</td>
               <td>{{p.unit}}</td>
-              <td>{{p.photoPath}}</td>
-              <td>{{p.vendorId}}</td>
-       
+              <td>{{p.photopath}}</td>
+              <td>{{p.vendors.name}}</td>
+
               <td>
                 <a routerLink="/product/detail//{{p.id}}">Detail</a> |
                 <a routerLink="/product/edit//{{p.id}}">Edit</a>
               </td>
-    
+
             </tr>
-    
-    
+
+
           </tbody>
-    
+
         </table>
     </main>
-    
-      <div>
+
+  </div>

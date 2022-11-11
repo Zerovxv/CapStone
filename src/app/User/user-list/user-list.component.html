@@ -2,6 +2,7 @@
 <app-head [pageTitle]="pageTitle"></app-head>
 <main id="main">
   <a routerLink="/user/create">Create New</a>
+  <input [(ngModel)]="searchCriteria" placeholder="Search">
 
     <table class="table table-sm">
       <thead>
@@ -19,15 +20,15 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let u of use">
+        <tr *ngFor="let u of use | userSearch: searchCriteria" >
           <td>{{u.id}}</td>
           <td>{{u.userName}}</td>
           <td>{{u.firstName}}</td>
           <td>{{u.lastName}}</td>
           <td>{{u.phone}}</td>
           <td>{{u.email}}</td>
-          <td>{{u.isReviewer}}</td>
-          <td>{{u.isAdmin}}</td>
+          <td>{{u.isReviewer | bool}}</td>
+          <td>{{u.isAdmin | bool}}</td>
           <td>
             <a routerLink="/user/detail//{{u.id}}">Detail</a> |
             <a routerLink="/user/edit//{{u.id}}">Edit</a>

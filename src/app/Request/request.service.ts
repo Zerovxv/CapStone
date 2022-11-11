@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import {Request} from './Request.class';
+import {Request} from './request.class';
 
 
 @Injectable({
@@ -9,10 +9,21 @@ import {Request} from './Request.class';
 })
 export class RequestService {
 
-  baseurl: string = "http://localhost:5185/api/Request";
+  baseurl: string = "http://localhost:5185/api/requests";
 
   constructor(private http: HttpClient)
   {  }
+
+  approve(id: number, req: Request)  : Observable<Request> {
+    return this.http.put(`${this.baseurl}/Approve/${id}`, req) as Observable<Request>;
+  }
+
+  reject(id: number, req: Request) : Observable<Request> {
+    return this.http.put(`${this.baseurl}/Reject/${id}`, req) as Observable<Request>;
+  }
+  review(id: number, req: Request) : Observable<Request> {
+    return this.http.put(`!${this.baseurl}/Review/${id}`, req) as Observable<Request>;
+  }
 
 
 

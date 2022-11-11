@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Vendor } from '../Vendor.class';
-import { VendorService } from '../vendor.service';
+import { VendorService } from '../vendorsvc.service';
 
 @Component({
   selector: 'app-vendor-create',
@@ -20,7 +20,7 @@ export class VendorCreateComponent implements OnInit {
   ) { }
 
   save(): void{
-    this.vensvc.create(this.ven).subscribe({
+    this.vendorsvc.create(this.ven).subscribe({
       next: (res) =>{
         console.debug("Vendor ceated");
         this.router.navigateByUrl("/vendor/list");

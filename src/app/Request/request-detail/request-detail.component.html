@@ -1,1 +1,47 @@
-<p>request-detail works!</p>
+<div id="component">
+  <app-head [pageTitle]="pageTitle"></app-head>
+  <main id="main">
+      <table class="table table-sm" *ngIf="req">
+        <tbody>
+          <tr>
+            <th>Id</th>
+              <td><input [(ngModel)]="req.id" type="number" disabled></td>
+          </tr>
+           <tr>
+            <th> Description</th>
+              <td><input [(ngModel)]="req.description" type="text" [disabled]="IsDetailPage"></td>
+           </tr>
+          <tr>
+            <th>Justification</th>
+              <td><input [(ngModel)]="req.justification" type="text" [disabled]="IsDetailPage"></td>
+          </tr>
+            <tr>
+              <th>RejectionReason</th>
+              <td><input [(ngModel)]="req.rejectionReason" type="currency" [disabled]="IsDetailPage"></td>
+            </tr>
+              <tr>
+                <th>DeliveryMode</th>
+                <td><input [(ngModel)]="req.deliveryMode" type="text" [disabled]="IsDetailPage"></td>
+              </tr>
+                  <tr>
+                  <th>Status</th>
+                  <td><input [(ngModel)]="req.status" type="text" [disabled]="IsDetailPage"></td>
+                  </tr>
+                  <tr>
+                    <th>Total</th>
+                    <td><input [(ngModel)]="req.total" type="number" [disabled]="IsDetailPage"></td>
+                    </tr>
+                    <tr>
+                    <th>UserId</th>
+                    <td><input [(ngModel)]="req.userId" disabled></td>
+                    </tr>
+
+        </tbody>
+
+      </table>
+      <div>
+        <button (click)="verifyDelete()" class="btn btn-danger">Delete</button>'
+      </div>
+  </main>
+
+</div>

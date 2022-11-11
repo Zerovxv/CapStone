@@ -43,7 +43,7 @@ export class ProductDetailComponent implements OnInit {
     this.prodsvc.get(id).subscribe({
       next: (res) => {
         console.debug("Product", res);
-        this.ven = res;
+        this.prod = res;
       },
       error: (err) => {
         console.error(err);
