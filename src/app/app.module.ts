@@ -39,7 +39,8 @@ import { UserSearchPipe } from './User/user-search.pipe';
 
 import { RequestLineCreateComponent } from './RequestLine/requestline-create/requestline-create.component';
 import { RequestLineEditComponent } from './RequestLine/requestline-edit/requestline-edit.component';
-import { ReviewComponent } from './Review/review/review.component';
+import { ReviewComponent } from './Request/review-requests/review.component';
+import { ReviewDetailComponent } from './Request/review-detail/review-detail.component';
 
 
 
@@ -74,6 +75,7 @@ import { ReviewComponent } from './Review/review/review.component';
     RequestLineEditComponent,
     RequestLinesComponent,
     ReviewComponent,
+    ReviewDetailComponent,
 
   ],
   imports: [
