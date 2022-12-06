@@ -15,15 +15,17 @@ export class RequestService {
   constructor(private http: HttpClient)
   {  }
 
-
-
-  approve(id: number, req: Request)  : Observable<Request> {
-    return this.http.put(`${this.baseurl}/Approve/${id}`, req) as Observable<Request>;
+  setToReview(request: Request): Observable<any> {
+    return this.http.put(`${this.baseurl}/review/${request.id}`, request) as Observable<any>;
   }
 
-  reject(id: number, req: Request) : Observable<Request> {
-    return this.http.put(`${this.baseurl}/Reject/${id}`, req) as Observable<Request>;
-  }
+  approve(request: Request): Observable<any> {
+    return this.http.put(`${this.baseurl}/approve/${request.id}`, request) as Observable<any>;}
+
+    reject(request: Request): Observable<any> {
+      return this.http.put(`${this.baseurl}/reject/${request.id}/${request.rejectionReason}`, request) as Observable<any>;
+    }
+
   review(id: number, req: Request) : Observable<Request> {
     return this.http.put(`!${this.baseurl}/Review/${id}`, req) as Observable<Request>;
   }

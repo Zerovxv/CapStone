@@ -30,30 +30,6 @@ export class RequestLinesComponent implements OnInit {
     this.router.navigateByUrl("/request/list");
   }
 
-  approve(): void {
-    this.reqsvc.approve(this.req.id, this.req).subscribe({
-      next: (res) => {
-        console.debug(res)
-        this.router.navigateByUrl("/request/list");
-      },
-      error: (err) => {
-        console.error(err)
-      }
-    })
-  }
-
-
-  reject(): void {
-    this.reqsvc.reject(this.req.id, this.req).subscribe({
-      next: (res) => {
-        console.debug(res)
-        this.router.navigateByUrl("/request/list");
-      },
-      error: (err) => {
-        console.error(err)
-      }
-    })
-  }
 
   submit(): void {
     this.reqsvc.review(this.req.id, this.req).subscribe({
